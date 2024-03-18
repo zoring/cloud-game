@@ -139,7 +139,7 @@ const moduleUi = (label = '', withGraph = false, postfix = () => 'ms') => {
     const update = (value) => {
         if (_graph) _graph.add(value);
         // 203 (333) ms
-        _value.textContent = `${value < 1 ? '<1' : value} ${_graph ? `(${_graph.max()}) ` : ''}${postfix_(value)}`;
+        _value.textContent = `${value < 1 ? '<1' : value}${_graph ? `(${_graph.max()}) ` : ''}${postfix_(value)}`;
     }
 
     const clear = () => {
