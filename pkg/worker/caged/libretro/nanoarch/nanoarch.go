@@ -166,6 +166,8 @@ func (n *Nanoarch) CoreLoad(meta Metadata) {
 	n.Video.gl.autoCtx = meta.AutoGlContext
 	n.Video.gl.enabled = meta.IsGlAllowed
 
+	thread.SwitchGraphics(n.Video.gl.enabled)
+
 	// hacks
 	Nan0.hackSkipHwContextDestroy = meta.HasHack("skip_hw_context_destroy")
 
@@ -934,6 +936,7 @@ func deinitVideo() {
 	Nan0.Video.gl.enabled = false
 	Nan0.Video.gl.autoCtx = false
 	Nan0.hackSkipHwContextDestroy = false
+	thread.SwitchGraphics(false)
 }
 
 type limit struct {
