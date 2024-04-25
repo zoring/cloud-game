@@ -61,11 +61,14 @@ const onFullscreen = (fullscreen) => {
     const el = document.fullscreenElement
 
     if (fullscreen) {
-        // aspect ratio calc
-        const w = window.screen.width ?? window.innerWidth
-        const hh = el.innerHeight || el.clientHeight || 0
-        const dw = (w - hh * state.aspect) / 2
-        state.screen.style.padding = `0 ${dw}px`
+        // timeout is due to a chrome bug
+        setTimeout(() => {
+            // aspect ratio calc
+            const w = window.screen.width ?? window.innerWidth
+            const hh = el.innerHeight || el.clientHeight || 0
+            const dw = (w - hh * state.aspect) / 2
+            state.screen.style.padding = `0 ${dw}px`
+        }, 1)
     } else {
         state.screen.style.padding = '0'
     }
