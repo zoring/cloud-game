@@ -187,6 +187,7 @@ emulator:
       #   - coreAspectRatio (bool) -- (deprecated) correct the aspect ratio on the client with the info from the core.
       #   - hid (map[int][]int)
       #       A list of device IDs to bind to the input ports.
+      #       Can be seen in human readable form in the console when worker.debug is enabled.
       #       Some cores allow binding multiple devices to a single port (DosBox), but typically,
       #       you should bind just one device to one port.
       #   - kbMouseSupport (bool) -- (temp) a flag if the core needs the keyboard and mouse on the client
