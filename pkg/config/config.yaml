@@ -226,6 +226,7 @@ emulator:
         # https://docs.libretro.com/library/fbneo/
         mame:
           lib: fbneo_libretro
+          folder: mame
           roms: [ "zip" ]
         nes:
           lib: nestopia_libretro
@@ -266,7 +267,7 @@ emulator:
         dos:
           lib: dosbox_pure_libretro
           roms: [ "zip", "cue" ]
-          folder: dosbox
+          folder: dos
           kbMouseSupport: true
           hid:
             0: [ 257, 513 ]

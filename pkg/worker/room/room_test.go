@@ -98,7 +98,7 @@ var (
 	alwas = games.GameMetadata{Name: "Alwa's Awakening (Demo)", Type: "nes", Path: "Alwa's Awakening (Demo).nes", System: "nes"}
 	sushi = games.GameMetadata{Name: "Sushi The Cat", Type: "gba", Path: "Sushi The Cat.gba", System: "gba"}
 	fd    = games.GameMetadata{Name: "Florian Demo", Type: "n64", Path: "Sample Demo by Florian (PD).z64", System: "n64"}
-	rogue = games.GameMetadata{Name: "Rogue", Type: "dos", Path: "dosbox/rogue.zip", System: "dos"}
+	rogue = games.GameMetadata{Name: "Rogue", Type: "dos", Path: "dos/rogue.zip", System: "dos"}
 )
 
 func TestMain(m *testing.M) {
